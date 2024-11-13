@@ -1,0 +1,14 @@
+---
+title: "Single-cell RNA-seq Analysis Report"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+pca_plot <- knitr::image_uri("${params.output_dir}/pca_plot.png")
+cat(sprintf("![PCA Plot](%s)", pca_plot))
+
+feature_plot <- knitr::image_uri("${params.output_dir}/feature_plot.png")
+cat(sprintf("![Feature Plot](%s)", feature_plot))
+

@@ -1,0 +1,12 @@
+scRNAseq-workflow/
+├── main.nf              # Nextflow script
+├── nextflow.config      # Workflow configuration file
+├── Dockerfile           # Docker environment configuration
+├── bin/                 # Custom scripts
+│   └── preprocess.R     # Data preprocessing script
+│   └── analysis.R       # Analysis and visualization script
+├── results/             # Workflow output, output_dir =... changes it
+├── Rmarkdown/           # Rmarkdown templates
+│   └── report_template.Rmd
+├── README.md            # Documentation
+
