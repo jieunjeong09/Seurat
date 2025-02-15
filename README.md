@@ -10,15 +10,13 @@ sualization
 
 ## Usage: 
 
-script_name --input_dir=.... --output_dir=...
-
-## To be added soon
+from command line, it will be `Rscript seurat.R path_to_input_directory`
 
 ### Preprocessing package with interactions
 
-It is essential to address the issues of MT genes and low quality cells, removing non-informative genes, and pro
+It is important  to address the issues of MT genes and low quality cells, removing non-informative genes, and pro
 vide some pre-analysis statistics to select parameters for this preprocessing.  E.g. the "normal" fraction of MT
- reads/UMIs depends on assay and biological source of cells.
+ reads/UMIs depends on assay and biological source of cells.  For now it is done with default values.
 
 ### Options for other clustering and visualization methods
 
