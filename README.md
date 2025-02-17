@@ -1,24 +1,32 @@
 
-# Package for single cell preliminary analysis
+# Vignette for single cell preliminary analysis
 
-## Input and output
+## The main source
 
-Input can be a directory in 10X Genomics format, barcodes.tsv for column names = cell identifiers, features.tsv.gz for rows, genes with pairs of symbols, ENSEMBL
-HUGO (sometimes missing or not unique). 
+This Rmarkdown is based on https://satijalab.org/seurat/articles/pbmc3k_tutorial
+with some changes in graphics and added exploration of using subset() function
+of Seurat to find markers according to subsets of clusters.  This function
+may enhance the use of Seurat in other ways too
 
-Output directory has two visualization files, and a table with a row for every cell giving coordinates in PCA vi
-sualization
 
-## Usage: 
+## The form
 
-One can run 
+scWorkflow -> Rmarkdown -> seurat_jieun.Rmd is the markdown file with about 25 code chunks.
+For practical use, one
+can add file saving commands for computed files and figures, and skip chunks with unwanted
+figures etc.
 
-### Preprocessing package with interactions
+The chunks cover all elements necessary in single set analysis, normalization, PCA,
+dimension reduction, clustering, marker identification with figues or tables for
+every step.
 
-It is important  to address the issues of MT genes and low quality cells, removing non-informative genes, and pro
-vide some pre-analysis statistics to select parameters for this preprocessing.  E.g. the "normal" fraction of MT
- reads/UMIs depends on assay and biological source of cells.  For now it is done with default values.
+That said, Seurat package has much
+more, allowing to adapt to specific needs of a project.
 
-### Options for other clustering and visualization methods
+## The next step
 
-PCA is not always the best so options for other methods provided by Seurat will be added.
+Although the source vignette was compiled in 2023, the newer data set have deeper
+coverage that require a new methodology like one that authored worked out in 2022.
+While this vignette is usable, it does not take full advantage of the increased
+UNI counts per cell, from ca. 1000 or less to 2500 or more.  So the next step is
+to present workflow modified with new methodology, and one improved visualization.
