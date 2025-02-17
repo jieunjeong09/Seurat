@@ -13,15 +13,22 @@ each cell (number in 2nd column, row number in barcodes.tsv).
 
 We create the initial Seurat object:
 ```{r, Warnings=F}
-pa = "/Users/jieun/Work/Git_test/Seurat/data/filtered_gene_bc_matrices/hg19"
+pa = "" # change it if you have a path to a directory described above
 library(dplyr)
 library(Seurat)
 library(patchwork)
 library(ggplot2)
 
-pbmc.data <- Read10X(data.dir = pa)
-# Initialize the Seurat object with the raw (non-normalized data).
-pbmc <- CreateSeuratObject(counts = pbmc.data, project = "pbmc3k", min.cells = 3, min.features = 200)
+if (pa != "") {
+  pbmc.data <- Read10X(data.dir = pa)
+  # Initialize the Seurat object with the raw (non-normalized data).
+  pbmc <- CreateSeuratObject(counts = pbmc.data, project = "pbmc3k",
+          min.cells = 3, min.features = 200)
+} else
+{
+  pb = "/Users/jieun/Work/Git_test/Seurat/data/filtered_gene_bc_matrices/hg19" # change it if you have a directory with this file
+  pbmc <- readRDS(file.path(pb,"pbmc.RDS"))
+}
 pbmc
 ```
 Quality contol metrics can be used to exclude some cells and gene from
