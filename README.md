@@ -3,14 +3,15 @@
 
 ## Input and output
 
-Input is a directory in 10X Genomics format, barcodes.tsv for column names = cell identifiers, features.tsv.gz for rows, genes with pairs of symbols, ENSEMBL (unique) and HUGO (sometimes missing or not unique).
+Input can be a directory in 10X Genomics format, barcodes.tsv for column names = cell identifiers, features.tsv.gz for rows, genes with pairs of symbols, ENSEMBL
+HUGO (sometimes missing or not unique). 
 
 Output directory has two visualization files, and a table with a row for every cell giving coordinates in PCA vi
 sualization
 
 ## Usage: 
 
-from command line, it will be `Rscript seurat.R path_to_input_directory`
+One can run 
 
 ### Preprocessing package with interactions
 
