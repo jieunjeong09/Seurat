@@ -11,7 +11,7 @@ may enhance the use of Seurat in other ways too
 
 ## The form
 
-scWorkflow -> Rmarkdown -> seurat_jieun.Rmd is the markdown file with about 25 code chunks.
+`scWorkflow -> Rmarkdown -> seurat_jieun.Rmd` is the markdown file with about 25 code chunks.
 For practical use, one
 can add file saving commands for computed files and figures, and skip chunks with unwanted
 figures etc.
@@ -23,10 +23,17 @@ every step.
 That said, Seurat package has much
 more, allowing to adapt to specific needs of a project.
 
+## scTransform()
+
+`scWorkflow -> Rmarkdown -> seurat_jieun_sct.Rmd` replaces older normalization and
+identification of highly variable features (genes) with a single command that
+in turn, applies improved transformation published by Satija Lab in 2022.
+
 ## The next step
 
-Although the source vignette was compiled in 2023, the newer data set have deeper
-coverage that require a new methodology like one that authored worked out in 2022.
-While this vignette is usable, it does not take full advantage of the increased
-UNI counts per cell, from ca. 1000 or less to 2500 or more.  So the next step is
-to present workflow modified with new methodology, and one improved visualization.
+I will the improved workflows on a data file with 15 times more cells and
+ca. 2.5 more UMIs per cell on the average, which are realistic parameters
+in new data sets.  This will require converting GEO data to a form
+required by Seurat and more desktop time...
+
+
