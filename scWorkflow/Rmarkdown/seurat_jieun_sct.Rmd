@@ -4,6 +4,9 @@ author: "Jieun Jeong"
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE)
+```
 This example analyzes data from a single cell experiment in one of the forms
 accepted by Seurat package, namely a directory with barcode.tsv, the list
 of cell identifiers, genes.tsv, the list of genes with Ensembl and Symbol
