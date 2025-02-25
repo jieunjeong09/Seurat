@@ -36,4 +36,10 @@ ca. 2.5 more UMIs per cell on the average, which are realistic parameters
 in new data sets.  This will require converting GEO data to a form
 required by Seurat and more desktop time...
 
+Explore modification of Seurat plotting to produce figures with
+smaller memory use, reducing precision of coordinates and eliminating
+points that overlap -- in limited precision coordinates.
+
+hope: 50k cells with 16 bytes per cell down to 30k cells with 4 byte per cell
+and similar saving for feature/gene plots
 
