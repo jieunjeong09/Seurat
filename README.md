@@ -9,9 +9,9 @@ of Seurat to find markers according to subsets of clusters.  This function
 may enhance the use of Seurat in other ways too
 
 
-## The form
+## What we do
 
-`scWorkflow -> Rmarkdown -> seurat_jieun.Rmd` is the markdown file with about 25 code chunks.
+`seurat_jieun_sct.Rmd` is the markdown file with about 25 code chunks.
 For practical use, one
 can add file saving commands for computed files and figures, and skip chunks with unwanted
 figures etc.
@@ -23,23 +23,22 @@ every step.
 That said, Seurat package has much
 more, allowing to adapt to specific needs of a project.
 
-## scTransform()
-
-`scWorkflow -> Rmarkdown -> seurat_jieun_sct.Rmd` replaces older normalization and
+I replaced older normalization and
 identification of highly variable features (genes) with a single command that
-in turn, applies improved transformation published by Satija Lab in 2022.
+applies improved transformation published by Satija Lab in 2022.
 
-## The next step
+## Next steps
 
-I will the improved workflows on a data file with 15 times more cells and
+A script that creates input directory from gene/cell matrix.
+
+Workflow with input and output paths as arguments.
+
+Testing the workflow on an input with size typical for new data sets,
+with 15 times more cells and
 ca. 2.5 more UMIs per cell on the average, which are realistic parameters
 in new data sets.  This will require converting GEO data to a form
 required by Seurat and more desktop time...
 
-Explore modification of Seurat plotting to produce figures with
-smaller memory use, reducing precision of coordinates and eliminating
-points that overlap -- in limited precision coordinates.
-
-hope: 50k cells with 16 bytes per cell down to 30k cells with 4 byte per cell
-and similar saving for feature/gene plots
+Improving some figures using ggplot2, including visualization of clusters
+for large number of cells (reducing file size etc).
 
